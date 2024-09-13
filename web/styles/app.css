@@ -1,0 +1,65 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app > h1 {
+  color: #996dff;
+  margin-top: 20px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 0.8s steps(40, end) forwards, brilho-light 1s alternate infinite;
+}
+
+/* Animação de digitação */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 250px; /* Aumenta progressivamente o tamanho do texto até que ele todo apareça */
+  }
+}
+
+#app > h2 {
+  align-self: flex-start;
+  margin-top: 64px;
+}
+
+#app > p {
+  align-self: flex-start;
+  text-align: justify;
+  width: 512px;
+  margin-top: -5px;
+}
+
+#app .placeholder {
+  color: #7c7c8a;
+  user-select: none;
+}
+
+body.dark-mode #app img{
+  animation: brilho-light 1s alternate infinite;
+}
+body.light-mode #app img{
+  animation: brilho-dark 1s alternate infinite;
+}
+@keyframes brilho-dark{
+  from{
+    filter: drop-shadow(0 0 5px #5100ff);
+  }
+  to{
+    filter: drop-shadow(0 0 20px #290083);
+  }
+}
+@keyframes brilho-light{
+  from{
+    filter: drop-shadow(0 0 5px #8257e5);
+  }
+  to{
+    filter: drop-shadow(0 0 20px #8257e5);
+  }
+}

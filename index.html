@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="icon" type="image/svg+xml" href="/icons8-ai-96.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./web/styles/base.css">
+    <title>Shorts Summary</title>
+  </head>
+  <body>
+    <div id="app">
+      <img src="/icons8-ai-96.png" alt="Logo" />
+      <h1>Shorts Summary</h1>
+
+      <form id="form">
+        <input type="url" id="url" placeholder="URL do vídeo" />
+        <button title="Resumir">
+          <i class="ph ph-play"></i>
+        </button>
+      </form>
+      <h2>Resumo</h2>
+      <p id="content" class="placeholder">Escolha um short para resumir</p>
+    </div>
+    <section>
+    <iframe width="460" height="215" src="https://www.youtube.com/embed/IH-wBijX53M" frameborder="0" allowfullscreen></iframe>
+    <br>
+    <iframe width="460" height="215" src="https://www.youtube.com/embed/anmuklFtu8U" frameborder="0" allowfullscreen></iframe>
+    <br>
+    <iframe width="460" height="215" src="https://www.youtube.com/embed/V7VOD0zzQQE" frameborder="0" allowfullscreen></iframe>
+    </section>
+<div class="radio-button-container">
+  <div class="radio-button">
+  <input type="radio" class="radio-button__input" id="radio1" name="radio-group" onclick="changeMode(dark)">
+  <label class="radio-button__label" for="radio1">
+    <span class="radio-button__custom"></span>
+    Dark Mode
+  </label>
+</div>
+<div class="radio-button">
+  <input type="radio" class="radio-button__input" id="radio2" name="radio-group" onclick="changeMode(light)">
+  <label class="radio-button__label" for="radio2">
+    <span class="radio-button__custom"></span>
+    Light Mode
+  </label>
+</div>
+</div>
+    <script src="./script.js"></script>
+    <script type="module" src="./web/main.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </body>
+</html>
